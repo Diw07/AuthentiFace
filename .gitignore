@@ -1,0 +1,65 @@
+# ─── Python ──────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+*.so
+
+# ─── Virtual Environments ────────────────────────────────
+venv/
+env/
+.venv/
+.env
+
+# ─── IDE and Editor ──────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-*
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ─── Model Weights (large binary files) ─────────────────
+models/pretrained/*.pth
+models/pretrained/*.onnx
+models/pretrained/*.safetensors
+models/pretrained/*.bin
+
+# ─── HuggingFace Cache ──────────────────────────────────
+.cache/
+huggingface/
+
+# ─── Data & Datasets ────────────────────────────────────
+data/raw/
+data/processed/
+data/sample/
+datasets/
+
+# ─── Media files (don't commit test media) ──────────────
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.wmv
+
+# ─── Uploads & Temp ─────────────────────────────────────
+app/uploads/*
+app/temp/*
+!app/uploads/.gitkeep
+!app/temp/.gitkeep
+*.log
+tmp/
+
+# ─── Testing ─────────────────────────────────────────────
+.pytest_cache/
+htmlcov/
+.coverage
+*.cover
+
+# ─── Gemini Agent artifacts ──────────────────────────────
+.gemini/

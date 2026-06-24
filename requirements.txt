@@ -1,0 +1,27 @@
+# ─── Core ML ─────────────────────────────────────────────
+torch>=2.0
+torchvision>=0.15
+transformers>=4.40
+huggingface-hub>=0.20
+safetensors>=0.4
+
+# ─── Face Detection & Preprocessing ─────────────────────
+insightface
+onnxruntime
+albumentations
+opencv-python
+Pillow
+
+# ─── Web Server ──────────────────────────────────────────
+fastapi
+uvicorn[standard]
+python-multipart
+jinja2
+aiofiles
+
+# ─── Visualization & Metrics ────────────────────────────
+matplotlib
+numpy
+scikit-learn
+tqdm
+grad-cam
