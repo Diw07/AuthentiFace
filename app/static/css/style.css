@@ -1,0 +1,81 @@
+/* ═══════════════════════════════════════════════════════════
+   DeepFake Detector — Forensics Dashboard Custom Styles
+   Supplements Tailwind CSS with animations & effects
+   ═══════════════════════════════════════════════════════════ */
+
+/* ─── Scrollbar ─────────────────────────────────────── */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: #94A3B8;
+    border-radius: 3px;
+}
+.dark ::-webkit-scrollbar-thumb {
+    background: #475569;
+}
+
+/* ─── Glass Panel ───────────────────────────────────── */
+.glass-panel {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+/* ─── Connector Line Animation ──────────────────────── */
+.connector-line {
+    position: relative;
+    overflow: hidden;
+}
+.connector-line::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.8), transparent);
+    transform: translateX(-100%);
+    animation: flow 2s infinite linear;
+}
+@keyframes flow {
+    100% { transform: translateX(100%); }
+}
+
+/* ─── Loading Spinner ───────────────────────────────── */
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(59, 130, 246, 0.15);
+    border-top-color: #3B82F6;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* ─── Gauge Mask (semicircle variant) ───────────────── */
+.gauge-mask {
+    mask-image: radial-gradient(circle at 50% 100%, transparent 40%, black 41%);
+    -webkit-mask-image: radial-gradient(circle at 50% 100%, transparent 40%, black 41%);
+}
+
+/* ─── Smooth fade-in for results ────────────────────── */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+#forensicsSection,
+#framesSection {
+    animation: fadeInUp 0.5s ease;
+}
